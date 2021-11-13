@@ -23,6 +23,10 @@ header{
     
 }
 
+h2{
+    margin: 0;
+}
+
 #container{
     display: flex;
     gap: 10px;
@@ -43,7 +47,7 @@ header{
 
 #inputTarefa{
     width: 250px;
-    height: 60px;
+    height: 35px;
     border-radius: 15px;
 }
 
@@ -54,6 +58,7 @@ header{
 }
 
 #lista{
+    padding-top: 15px;
     width: 490px;
     border: solid 1px;
     border-radius: 15px;
