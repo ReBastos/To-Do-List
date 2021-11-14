@@ -41,11 +41,13 @@ function adicionar() {
 
 //Remove Elemento da Lista de Tarefas
 function removerItem(e) {
+  var confirmacao = confirm("Deseja excluir esse item da lista?");
+  if(confirmacao == true){
   e.preventDefault();
   var li = this.parentNode;
   li.parentNode.removeChild(li);
-
   armazenamentoLocal();
+} 
 }
 
 //Atualiza Local Storage
