@@ -1,6 +1,40 @@
 var tarefasLocal = [];
-var indexLocal = 0;
 
+//Restaura Lista ao Recarregar Página
+var restaurarLocal = JSON.parse(localStorage.getItem("tarefa"));
+for (var j = 0; j < restaurarLocal.length; j++) {
+  var tarefa = document.getElementById("inputTarefa").value;
+  var iconeTrash = '<i class="fas fa-trash"></i>';
+  var listItem =
+    "<li><input type='checkbox' class='concluido'><span class='texto'>" +
+    restaurarLocal[j] +
+    "</span> <button class='trash'>" +
+    iconeTrash +
+    "</button></li>";
+
+  var lista = document.getElementById("uList");
+
+  lista.insertAdjacentHTML("beforeend", listItem);
+
+  var linhas = document.getElementsByClassName("trash");
+
+  //Adiciona Evento aos Botões
+  for (var i = 0; i < linhas.length; i++) {
+    linhas[i].addEventListener("click", removerItem);
+  }
+  var check = document.getElementsByClassName("concluido");
+
+  //Adiciona Evento aos CheckBoxes
+  for (var i = 0; i < check.length; i++) {
+    check[i].addEventListener("click", concluido);
+  }
+
+  armazenamentoLocal();
+
+  document.getElementById("inputTarefa").value = null;
+}
+
+//Adicionar Tarefa
 function adicionar() {
   var tarefa = document.getElementById("inputTarefa").value;
   var iconeTrash = '<i class="fas fa-trash"></i>';
@@ -23,15 +57,14 @@ function adicionar() {
     for (var i = 0; i < linhas.length; i++) {
       linhas[i].addEventListener("click", removerItem);
     }
-
     var check = document.getElementsByClassName("concluido");
+
     //Adiciona Evento aos CheckBoxes
     for (var i = 0; i < check.length; i++) {
       check[i].addEventListener("click", concluido);
     }
 
     armazenamentoLocal();
-
     document.getElementById("inputTarefa").value = null;
   } else {
     window.alert("Insira uma tarefa!");
@@ -48,37 +81,37 @@ function removerItem() {
   }
 }
 
-function concluido(){
-  
-  if(this.checked){
-  var li = this.parentNode;
-  
-  var tarefaConcluida = (li.getElementsByClassName('texto')[0].textContent).strike();
-  
-  li.getElementsByClassName('texto')[0].textContent = null;
-  li.getElementsByClassName('texto')[0].insertAdjacentHTML('beforeend', tarefaConcluida);
-} else {
-  var li = this.parentNode;
-  var tarefaConcluida = li.getElementsByClassName('texto')[0].textContent;
-  
-  li.getElementsByClassName('texto')[0].textContent = null;
-  li.getElementsByClassName('texto')[0].insertAdjacentHTML('beforeend', tarefaConcluida);
-}
+//Riscar Elementos da Lista
+function concluido() {
+  if (this.checked) {
+    var li = this.parentNode;
+    var tarefaConcluida = li
+      .getElementsByClassName("texto")[0]
+      .textContent.strike();
+    li.getElementsByClassName("texto")[0].textContent = null;
+    li.getElementsByClassName("texto")[0].insertAdjacentHTML(
+      "beforeend",
+      tarefaConcluida
+    );
+  } else {
+    var li = this.parentNode;
+    var tarefaConcluida = li.getElementsByClassName("texto")[0].textContent;
+    li.getElementsByClassName("texto")[0].textContent = null;
+    li.getElementsByClassName("texto")[0].insertAdjacentHTML(
+      "beforeend",
+      tarefaConcluida
+    );
+  }
 }
 
 //Atualiza Local Storage
 function armazenamentoLocal() {
+  //Atualiza Tarefas
   var span = document.getElementsByClassName("texto");
   var arraySpan = [];
-
   for (var i = 0; i < span.length; i++) {
     arraySpan[i] = span[i].textContent;
-    
   }
-
   var spanStr = JSON.stringify(arraySpan);
-
   localStorage.setItem("tarefa", spanStr);
-
-  
 }

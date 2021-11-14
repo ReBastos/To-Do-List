@@ -1,93 +1,160 @@
-body{
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    display: flex;
-    justify-content: center;
+body {
+  padding-top: 15px;
+  width: 100vw;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #eef5fb;
 }
 
-main{
-    width: 800px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
+main {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-header{
-    width: 800px;
-    border-radius: 15px;
-    border: solid 1px;
-    text-align: center;
-    margin-bottom: 10px;
-    
+header {
+  width: 800px;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 10px;
+  background: #e3edf7;
+  box-shadow: 6px 6px 4px #cddbe8, -6px -6px 24px #ffffff;
 }
 
-h2{
-    margin: 0;
+h2,
+span {
+  margin: 0;
+  font-family: sans-serif;
+  color: #536877;
 }
 
-#container{
-    display: flex;
-    gap: 10px;
-
-    
-}
-#formulario{
-    height: 200px;
-    width: 300px;
-    border: solid 1px;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+h1 {
+  font-family: sans-serif;
+  color: #536877;
 }
 
-#inputTarefa{
-    width: 250px;
-    height: 35px;
-    border-radius: 15px;
+#container {
+  display: flex;
+  gap: 10px;
+}
+#formulario {
+  height: 200px;
+  width: 300px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background: #e3edf7;
+  box-shadow: inset 6px 6px 4px #cddbe8, inset -6px -6px 24px #ffffff;
 }
 
-#adicionar{
-    width: 120px;
-    height: 40px;
-    border-radius: 15px;
+#inputTarefa {
+  width: 250px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  color: #536877;
+  background: #e3edf7;
+  box-shadow: inset 5px 5px 10px #cddbe8, inset -5px -5px 10px #ffffff;
 }
 
-#lista{
-    padding-top: 15px;
-    width: 490px;
-    border: solid 1px;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: fit-content;
+#inputTarefa::placeholder {
+  font-family: sans-serif;
+}
+#inputTarefa:focus {
+  outline: 0;
 }
 
-ul{
-    list-style-type: none;
-    padding: 0;
-}
-li{
-    margin-bottom: 10px;
-    height: fit-content;
-    min-height: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 390px;
-    border: solid 1px;
-    border-radius: 8px;
-    padding-left: 5px;
-    padding-right: 5px;
+#adicionar {
+  width: 120px;
+  height: 40px;
+  border-radius: 15px;
+  color: #536877;
+  font-weight: bold;
+    border: none;
+    background: linear-gradient(145deg, #f3feff, #ccd5de);
+    box-shadow:  5px 5px 10px #cddbe8,
+             -5px -5px 10px #ffffff;  
 }
 
-li > span{
-    max-width: 200px;
-    text-align: left;
-    word-break: break-all;
+#adicionar:hover{
+    background: linear-gradient(145deg, #ccd5de, #f3feff);
+    box-shadow:  5px 5px 10px #cddbe8,
+             -5px -5px 10px #ffffff;
+}
+
+#adicionar:active{
+    background: #e3edf7;
+    box-shadow: inset 5px 5px 10px #a3abb2,
+            inset -5px -5px 10px #ffffff;
+}
+
+
+#lista {
+  padding-top: 15px;
+  width: 490px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  background-color: #e3edf7;
+  background: #e3edf7;
+  box-shadow: inset 6px 6px 4px #cddbe8, inset -6px -6px 24px #ffffff;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  margin-bottom: 10px;
+  min-height: 40px;
+  height: fit-content;
+  min-height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 390px;
+  border-radius: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background: #e3edf7;
+  box-shadow: inset 6px 6px 5px #cddbe8, inset -6px -6px 5px #f5ffff;
+}
+
+li > span {
+  width: 330px;
+  text-align: left;
+  word-break: break-all;
+}
+
+.trash {
+  border: none;
+  border-radius: 34px;
+  background: linear-gradient(145deg, #f3feff, #ccd5de);
+  box-shadow: 5px 5px 7px #cddbe8, -5px -5px 7px #ffffff;
+}
+
+.trash:hover {
+  border-radius: 34px;
+  background: #e3edf7;
+  box-shadow: 5px 5px 7px #cddbe8, -5px -5px 7px #ffffff;
+}
+
+.trash:active {
+  border-radius: 34px;
+  background: #e3edf7;
+  box-shadow: inset 5px 5px 7px #cddbe8, inset -5px -5px 7px #ffffff;
+}
+
+#adicionar {
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
 }
