@@ -89,6 +89,7 @@ h1 {
 #adicionar:hover {
   background: linear-gradient(145deg, #ccd5de, #f3feff);
   box-shadow: 5px 5px 10px #cddbe8, -5px -5px 10px #ffffff;
+  cursor: pointer;
 }
 
 #adicionar:active {
@@ -146,6 +147,7 @@ li > span {
   border-radius: 34px;
   background: linear-gradient(145deg, #ccd5de, #f3feff);
   box-shadow: 3px 3px 4px #cddbe8, -5px -5px 7px #ffffff;
+  cursor: pointer;
 }
 
 .trash:active {
