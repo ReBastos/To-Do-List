@@ -17,16 +17,16 @@ main {
   flex-wrap: wrap;
   border-radius: 15px;
   background: #e3edf7;
-  box-shadow: 6px 6px 4px #cddbe8, -6px -6px 24px #ffffff;
+  box-shadow: 6px 6px 4px #bcc9d4, -6px -6px 24px #ffffff;
 }
 
 header {
   width: 800px;
   border-radius: 15px;
-  text-align: center;
   margin-bottom: 10px;
+  text-align: center;
   background: #e3edf7;
-  box-shadow: 6px 6px 4px #cddbe8, -6px -6px 24px #ffffff;
+  box-shadow: 6px 6px 4px #bcc9d4, -6px -6px 24px #ffffff;
 }
 
 h2,
@@ -55,7 +55,7 @@ h1 {
   align-items: center;
   gap: 30px;
   background: #e3edf7;
-  box-shadow: inset 6px 6px 4px #cddbe8, inset -6px -6px 24px #ffffff;
+  box-shadow: inset 6px 6px 4px #bbc8d4, inset -3px -3px 10px #ffffff;
 }
 
 #inputTarefa {
@@ -81,24 +81,20 @@ h1 {
   border-radius: 15px;
   color: #124a72;
   font-weight: bold;
-    border: none;
-    background: linear-gradient(145deg, #f3feff, #ccd5de);
-    box-shadow:  5px 5px 10px #cddbe8,
-             -5px -5px 10px #ffffff;  
+  border: none;
+  background: linear-gradient(145deg, #f3feff, #ccd5de);
+  box-shadow: 5px 5px 4px #b4c0cc, -5px -5px 8px #ffffff;
 }
 
-#adicionar:hover{
-    background: linear-gradient(145deg, #ccd5de, #f3feff);
-    box-shadow:  5px 5px 10px #cddbe8,
-             -5px -5px 10px #ffffff;
+#adicionar:hover {
+  background: linear-gradient(145deg, #ccd5de, #f3feff);
+  box-shadow: 5px 5px 10px #cddbe8, -5px -5px 10px #ffffff;
 }
 
-#adicionar:active{
-    background: #e3edf7;
-    box-shadow: inset 5px 5px 10px #a3abb2,
-            inset -5px -5px 10px #ffffff;
+#adicionar:active {
+  background: #e3edf7;
+  box-shadow: inset 5px 5px 10px #a3abb2, inset -5px -5px 10px #ffffff;
 }
-
 
 #lista {
   padding-top: 15px;
@@ -110,7 +106,7 @@ h1 {
   height: fit-content;
   background-color: #e3edf7;
   background: #e3edf7;
-  box-shadow: inset 6px 6px 4px #cddbe8, inset -6px -6px 24px #ffffff;
+  box-shadow: inset 6px 6px 4px #bcc9d4, inset -3px -3px 10px #ffffff;
 }
 
 ul {
@@ -143,19 +139,19 @@ li > span {
   border: none;
   border-radius: 34px;
   background: linear-gradient(145deg, #f3feff, #ccd5de);
-  box-shadow: 5px 5px 7px #cddbe8, -5px -5px 7px #ffffff;
+  box-shadow: 3px 3px 4px #acb7c2, -5px -5px 7px #ffffff;
 }
 
 .trash:hover {
   border-radius: 34px;
-  background: #e3edf7;
-  box-shadow: 5px 5px 7px #cddbe8, -5px -5px 7px #ffffff;
+  background: linear-gradient(145deg, #ccd5de, #f3feff);
+  box-shadow: 3px 3px 4px #cddbe8, -5px -5px 7px #ffffff;
 }
 
 .trash:active {
   border-radius: 34px;
   background: #e3edf7;
-  box-shadow: inset 5px 5px 7px #cddbe8, inset -5px -5px 7px #ffffff;
+  box-shadow: inset 7px 7px 4px #b8c3ce, inset -5px -5px 7px #ffffff;
 }
 
 #adicionar {

@@ -25,24 +25,11 @@ for (var j = 0; j < restaurarLocal.length; j++) {
       "</span> <button class='trash'>" +
       iconeTrash +
       "</button></li>";
-
     var lista = document.getElementById("uList");
-
     lista.insertAdjacentHTML("beforeend", listItem);
   }
 
-  //Adiciona Evento aos Botões
-  var linhas = document.getElementsByClassName("trash");
-  for (var i = 0; i < linhas.length; i++) {
-    linhas[i].addEventListener("click", removerItem);
-  }
-  var check = document.getElementsByClassName("concluido");
-
-  //Adiciona Evento aos CheckBoxes
-  for (var i = 0; i < check.length; i++) {
-    check[i].addEventListener("click", concluido);
-  }
-
+  addListener();
   armazenamentoLocal();
 
   document.getElementById("inputTarefa").value = null;
@@ -65,23 +52,26 @@ function adicionar() {
 
     lista.insertAdjacentHTML("beforeend", listItem);
 
-    var linhas = document.getElementsByClassName("trash");
-
-    //Adiciona Evento aos Botões
-    for (var i = 0; i < linhas.length; i++) {
-      linhas[i].addEventListener("click", removerItem);
-    }
-    var check = document.getElementsByClassName("concluido");
-
-    //Adiciona Evento aos CheckBoxes
-    for (var i = 0; i < check.length; i++) {
-      check[i].addEventListener("click", concluido);
-    }
-
+    addListener();
     armazenamentoLocal();
     document.getElementById("inputTarefa").value = null;
   } else {
     window.alert("Insira uma tarefa!");
+  }
+}
+
+//Adicionar Eventos CheckBoxes/Botões
+function addListener() {
+  //Adiciona Evento aos Botões
+  var linhas = document.getElementsByClassName("trash");
+  for (var i = 0; i < linhas.length; i++) {
+    linhas[i].addEventListener("click", removerItem);
+  }
+
+  //Adiciona Evento aos CheckBoxes
+  var check = document.getElementsByClassName("concluido");
+  for (var i = 0; i < check.length; i++) {
+    check[i].addEventListener("click", concluido);
   }
 }
 
@@ -133,6 +123,7 @@ function armazenamentoLocal() {
   armazenamentoConcluido();
 }
 
+//Atualiza Local Storage
 function armazenamentoConcluido() {
   //Atualiza Tarefas Concluidas
   var check = document.getElementsByClassName("concluido");
