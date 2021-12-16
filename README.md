@@ -6,6 +6,6 @@
 
 To-Do List is a project made intented to larn HTML, CSS and JavaScript.
 
-##Instalation
+## Instalation
 
 To use the To-Do List, you only need to download this code and open the index.html file with your favorit web browser.
