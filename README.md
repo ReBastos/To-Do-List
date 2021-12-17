@@ -25,6 +25,9 @@ The second element of this component is the ‘Add’ button. When clicked,  it 
 ### 2st Component (The List)
 
 The list is composed by all activities you added using the previews component.
+
 There ate two types of activities, the completed ones and the "to-do" ones.
+
 When an activitie is completed, you can mark the checkbox next to it to mark it as 'completed'.
+
 Completed elements can be seen by a strike mark on his text.
