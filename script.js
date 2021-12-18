@@ -4,7 +4,7 @@ var tarefasLocal = [];
 var restaurarLocal = JSON.parse(localStorage.getItem("tarefa"));
 var restaurarConcluido = JSON.parse(localStorage.getItem("concluido"));
 for (var j = 0; j < restaurarLocal.length; j++) {
-  console.log(restaurarConcluido[j]);
+  
   if (restaurarConcluido[j] == true) {
     var iconeTrash = '<i class="fas fa-trash"></i>';
     var listItem =
