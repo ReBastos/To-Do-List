@@ -7,7 +7,7 @@ To-Do List is a project made intended to learn HTML, CSS and JavaScript.
 
 ## Manual 
 
-To use the To-Do List, you only need to download this code and open the <b>index.html</b> file with your favorite web browser.
+You can try the To-Do-List <a href='https://to-do-list-weld-five.vercel.app/'><b>HERE</b></a>
 
 ### How to Use It
 In the input on the left, you can write your activities, then press the 'Add' button below it to send your text to the list of activities.
